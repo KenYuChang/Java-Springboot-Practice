@@ -3,9 +3,9 @@ package com.ken.demo.student;
 import jakarta.validation.constraints.NotEmpty;
 
 public record StudentDto(
-        @NotEmpty
+        @NotEmpty(message = "First name is required")
         String firstname,
-        @NotEmpty
+        @NotEmpty(message = "Last name is required")
         String lastname,
         String email,
         Integer schoolId
